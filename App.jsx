@@ -11,7 +11,12 @@ import { DATA } from './data';
 export default class App extends Component {
   renderCard(item) {
     return (
-      <Card key={item.id}>
+      <Card
+        key={item.id}
+        containerStyle={{
+          height: Dimensions.get('window').height * 0.6,
+        }}
+      >
         <Card.Title>{item.text}</Card.Title>
         <Image
           style={styles.cardImage}
